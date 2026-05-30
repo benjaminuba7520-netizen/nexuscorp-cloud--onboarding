@@ -80,6 +80,65 @@
                             configuring a restricted sandbox environment for junior developer Alex, who requires 
                             visibility but must be restricted from modifying production environments.
                         </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 1: Securing the Root Account -->
+            <div class="mt-5">
+                <h2 class="text-center">STEP 1 — SECURING THE ROOT ACCOUNT</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+
+                        <!-- 1.1 -->
+                        <h5 class="mt-4"><strong>1.1 — Console Sign In</strong></h5>
+                        <p>Navigate to the AWS Console and select sign in as root user.</p>
+                        <img src="images/console-sign-in.png" alt="Console Sign In" class="img-fluid mt-2 mb-4 border" />
+
+                        <!-- 1.2 -->
+                        <h5 class="mt-4"><strong>1.2 — Root Account Sign In</strong></h5>
+                        <p>Enter the root account email address to proceed with login.</p>
+                        <img src="images/root-account-sign-in.png" alt="Root Account Sign In" class="img-fluid mt-2 mb-4 border" />
+
+                        <!-- 1.3 -->
+                        <h5 class="mt-4"><strong>1.3 — Email Address Input</strong></h5>
+                        <p>Input the registered root email address associated with the AWS account.</p>
+                        <img src="images/email-address-input.png" alt="Email Address Input" class="img-fluid mt-2 mb-4 border" />
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Enabling MFA on Root Account -->
+            <div class="mt-5">
+                <h2 class="text-center">STEP 2 — ENABLING MFA ON THE ROOT ACCOUNT</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+
+                        <!-- 2.1 -->
+                        <h5 class="mt-4"><strong>2.1 — Search for MFA Settings</strong></h5>
+                        <p>In the AWS Console, search for MFA to locate the security credentials settings.</p>
+                        <img src="images/mfa-search.png" alt="MFA Search" class="img-fluid mt-2 mb-4 border" />
+
+                        <!-- 2.2 -->
+                        <h5 class="mt-4"><strong>2.2 — Add MFA for Root User</strong></h5>
+                        <p>Select the option to assign an MFA device to the root user account.</p>
+                        <img src="images/add-mfa-root-user.png" alt="Add MFA for Root User" class="img-fluid mt-2 mb-4 border" />
+
+                        <!-- 2.3 -->
+                        <h5 class="mt-4"><strong>2.3 — Device Name & Authenticator App</strong></h5>
+                        <p>Enter a device name and select Authenticator App as the MFA method.</p>
+                        <img src="images/device-name-authenticator.png" alt="Device Name Authenticator App" class="img-fluid mt-2 mb-4 border" />
+
+                        <!-- 2.4 -->
+                        <h5 class="mt-4"><strong>2.4 — Barcode Scan</strong></h5>
+                        <p>Scan the QR barcode using your authenticator app to link the MFA device.</p>
+                        <img src="images/barcode-scan.png" alt="Barcode Scan" class="img-fluid mt-2 mb-4 border" />
+
+                        <!-- 2.5 -->
+                        <h5 class="mt-4"><strong>2.5 — MFA Successfully Assigned</strong></h5>
+                        <p>MFA has been successfully assigned to the root account. The root account is now protected with two-factor authentication.</p>
+                        <img src="images/mfa-assigned.png" alt="MFA Assigned" class="img-fluid mt-2 mb-4 border" />
 
                     </div>
                 </div>
