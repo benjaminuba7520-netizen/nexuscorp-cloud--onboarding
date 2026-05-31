@@ -6,11 +6,13 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Bare - Start Bootstrap Template</title>
+        <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <!-- Navbar -->
+        <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">NexusCorp Global</a>
@@ -33,7 +35,7 @@
             </div>
         </nav>
 
-        <!-- Page content -->
+        <!-- Page content-->
         <div class="container">
 
             <!-- Page Title -->
@@ -43,34 +45,34 @@
             </div>
 
             <!-- Introduction Section -->
-            <div class="mt-5">
-                <h2 class="text-center">INTRODUCTION</h2>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <p class="mt-3">
-                            During an internal security audit at NexusCorp, it was discovered that contract 
-                            developers were sharing root account credentials to test applications — a major 
-                            security risk that exposed the organisation to financial loss, data breaches, 
-                            and compliance violations.
-                        </p>
-                        <p>
-                            My job was to fix that. This article documents how I achieved the following 
-                            security milestones step by step:
-                        </p>
-                        <ul>
-                            <li class="mb-2">Hardened the root account by configuring virtual Multi-Factor Authentication (MFA) using an authenticator app.</li>
-                            <li class="mb-2">Isolated financial monitoring by creating a Finance-Auditors IAM User Group with the AWS Billing managed policy attached.</li>
-                            <li class="mb-2">Established an Admin Proxy user with administrator console permissions, removing all reliance on the root account for daily operations.</li>
-                            <li class="mb-2">Implemented Developer RBAC by creating an Engineering-ReadOnly-Devs IAM User Group with the ReadOnlyAccess managed policy.</li>
-                            <li class="mb-2">Provisioned a restricted sandbox identity for junior developer Alex, limiting access to read-only visibility with no ability to modify production environments.</li>
-                            <li class="mb-2">Verified the access restrictions by logging in as alex-dev and confirming that all attempts to create resources were blocked by AWS.</li>
-                        </ul>
-                        <p>
-                            Follow along to see exactly how each milestone was achieved, with screenshots 
-                            at every step.
-                        </p>
-
-                        <!-- Business Problem -->
+<div class="mt-5">
+    <h2 class="text-center">INTRODUCTION</h2>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <p class="mt-3">
+                During an internal security audit at NexusCorp, it was discovered that contract 
+                developers were sharing root account credentials to test applications — a major 
+                security risk that exposed the organisation to financial loss, data breaches, 
+                and compliance violations.
+            </p>
+            <p>
+                My job was to fix that. This article documents how I achieved the following 
+                security milestones step by step:
+            </p>
+            <ul>
+                <li class="mb-2">Hardened the root account by configuring virtual Multi-Factor Authentication (MFA) using an authenticator app.</li>
+                <li class="mb-2">Isolated financial monitoring by creating a Finance-Auditors IAM User Group with the AWS Billing managed policy attached.</li>
+                <li class="mb-2">Established an Admin Proxy user with administrator console permissions, removing all reliance on the root account for daily operations.</li>
+                <li class="mb-2">Implemented Developer RBAC by creating an Engineering-ReadOnly-Devs IAM User Group with the ReadOnlyAccess managed policy.</li>
+                <li class="mb-2">Provisioned a restricted sandbox identity for junior developer Alex, limiting access to read-only visibility with no ability to modify production environments.</li>
+                <li class="mb-2">Verified the access restrictions by logging in as alex-dev and confirming that all attempts to create resources were blocked by AWS.</li>
+            </ul>
+            <p>
+                Follow along to see exactly how each milestone was achieved, with screenshots 
+                at every step.
+            </p>
+        
+             <!-- Business Problem -->
                         <h4 class="mt-4"><strong>The Business Problem</strong></h4>
                         <p>
                             Contract developers were sharing root account credentials to test applications. 
@@ -78,17 +80,19 @@
                             NexusCorp to serious compliance violations.
                         </p>
 
-                        <!-- My Objective -->
-                        <h4 class="mt-4"><strong>My Objective</strong></h4>
-                        <p>As the engineer assigned to this ticket, I was tasked to achieve the following:</p>
-                        <ol>
-                            <li class="mb-2"><strong>Harden the Root Identity</strong> — Log into the AWS Root account and immediately configure virtual MFA using an authenticator app.</li>
-                            <li class="mb-2"><strong>Isolate Financial Monitoring</strong> — Create an IAM User Group named Finance-Auditors and attach the AWS-managed Billing policy.</li>
-                            <li class="mb-2"><strong>Establish an Admin Proxy</strong> — Create a personalised IAM User, assign it to the Finance-Auditors group, and grant administrator console permissions.</li>
-                            <li class="mb-2"><strong>Implement Developer RBAC</strong> — Create an IAM User Group named Engineering-ReadOnly-Devs and attach the ReadOnlyAccess managed policy.</li>
-                            <li class="mb-2"><strong>Provision the Developer Identity</strong> — Create an IAM User named alex-dev and add them to the Engineering-ReadOnly-Devs group.</li>
-                            <li class="mb-2"><strong>Verify Access Restrictions</strong> — Log in as alex-dev and confirm the access block is working correctly.</li>
-                        </ol>
+<!-- My Objective -->
+<h4 class="mt-4"><strong>My Objective</strong></h4>
+<p>As the engineer assigned to this ticket, I was tasked to achieve the following:</p>
+<ol>
+    <li class="mb-2"><strong>Harden the Root Identity</strong> — Log into the AWS Root account and immediately configure virtual MFA using an authenticator app.</li>
+    <li class="mb-2"><strong>Isolate Financial Monitoring</strong> — Create an IAM User Group named Finance-Auditors and attach the AWS-managed Billing policy.</li>
+    <li class="mb-2"><strong>Establish an Admin Proxy</strong> — Create a personalised IAM User, assign it to the Finance-Auditors group, and grant administrator console permissions.</li>
+    <li class="mb-2"><strong>Implement Developer RBAC</strong> — Create an IAM User Group named Engineering-ReadOnly-Devs and attach the ReadOnlyAccess managed policy.</li>
+    <li class="mb-2"><strong>Provision the Developer Identity</strong> — Create an IAM User named alex-dev and add them to the Engineering-ReadOnly-Devs group.</li>
+    <li class="mb-2"><strong>Verify Access Restrictions</strong> — Log in as alex-dev and confirm the access block is working correctly.</li>
+</ol>
+
+                        </p>
                     </div>
                 </div>
             </div>
@@ -99,14 +103,17 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
 
+                        <!-- 1.1 -->
                         <h5 class="mt-4"><strong>1.1 — Console Sign In</strong></h5>
                         <p>Navigate to the AWS Console and select sign in as root user.</p>
                         <img src="images/console-sign-in.jpg" alt="Console Sign In" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 1.2 -->
                         <h5 class="mt-4"><strong>1.2 — Root Account Sign In</strong></h5>
                         <p>Enter the root account email address to proceed with login.</p>
                         <img src="images/root-account-sign-in.jpg" alt="Root Account Sign In" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 1.3 -->
                         <h5 class="mt-4"><strong>1.3 — Email Address Input</strong></h5>
                         <p>Input the registered root email address associated with the AWS account.</p>
                         <img src="images/email-address-inpute.jpg" alt="Email Address Input" class="img-fluid mt-2 mb-4 border" />
@@ -115,71 +122,75 @@
                 </div>
             </div>
 
-            <!-- Step 2: Enabling MFA -->
+            <!-- Step 2: Enabling MFA on Root Account -->
             <div class="mt-5">
                 <h2 class="text-center">STEP 2 — ENABLING MFA ON THE ROOT ACCOUNT</h2>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
 
+                        <!-- 2.1 -->
                         <h5 class="mt-4"><strong>2.1 — Search for MFA Settings</strong></h5>
                         <p>In the AWS Console, search for MFA to locate the security credentials settings.</p>
                         <img src="images/mfa-search.jpg" alt="MFA Search" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 2.2 -->
                         <h5 class="mt-4"><strong>2.2 — Add MFA for Root User</strong></h5>
                         <p>Select the option to assign an MFA device to the root user account.</p>
                         <img src="images/add-m.jpg" alt="Add MFA for Root User" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 2.3 -->
                         <h5 class="mt-4"><strong>2.3 — Device Name & Authenticator App</strong></h5>
                         <p>Enter a device name and select Authenticator App as the MFA method.</p>
                         <img src="images/device-name.jpg" alt="Device Name" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 2.4 -->
                         <h5 class="mt-4"><strong>2.4 — Authenticator App Setup</strong></h5>
                         <p>Open your authenticator app and prepare to scan the QR code.</p>
                         <img src="images/authenticator-app.jpg" alt="Authenticator App" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 2.5 -->
                         <h5 class="mt-4"><strong>2.5 — Barcode Scan</strong></h5>
                         <p>Scan the QR barcode using your authenticator app to link the MFA device.</p>
                         <img src="images/barcode-scan.jpg" alt="Barcode Scan" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 2.6 -->
                         <h5 class="mt-4"><strong>2.6 — MFA Successfully Assigned</strong></h5>
                         <p>MFA has been successfully assigned to the root account. The root account is now protected with two-factor authentication.</p>
                         <img src="images/mfa-assigned.jpg" alt="MFA Assigned" class="img-fluid mt-2 mb-4 border" />
 
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 3: Isolate Financial Monitoring -->
+                                    <!-- Step 3: Isolate Financial Monitoring - IAM User Group -->
             <div class="mt-5">
                 <h2 class="text-center">STEP 3 — ISOLATE FINANCIAL MONITORING</h2>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
 
+                        <!-- 3.1 -->
                         <h5 class="mt-4"><strong>3.1 — Search for IAM</strong></h5>
                         <p>In the AWS Console search bar, type IAM and select the IAM service to begin setting up user groups.</p>
                         <img src="iam-user-group/search-iam.jpg" alt="Search IAM" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 3.2 -->
                         <h5 class="mt-4"><strong>3.2 — Click on IAM User Groups</strong></h5>
                         <p>Inside the IAM Console, navigate to User Groups and click Create Group.</p>
                         <img src="iam-user-group/click-iam-usg.jpg" alt="Click IAM User Groups" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 3.3 -->
                         <h5 class="mt-4"><strong>3.3 — Choose Group Name</strong></h5>
                         <p>Name the group <strong>Finance-Auditors</strong> to clearly identify its purpose and scope.</p>
                         <img src="iam-user-group/choose-name-fg.jpg" alt="Choose Group Name" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 3.4 -->
                         <h5 class="mt-4"><strong>3.4 — Select AWS Managed Policy</strong></h5>
                         <p>Search for and select the AWS managed policy to attach to the Finance-Auditors group.</p>
                         <img src="iam-user-group/aws-managed.jpg" alt="AWS Managed Policy" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 3.5 -->
                         <h5 class="mt-4"><strong>3.5 — Attach Billing Policy</strong></h5>
                         <p>Attach the <strong>Billing</strong> managed policy to the Finance-Auditors group, granting financial visibility without admin access.</p>
                         <img src="iam-user-group/billing-policy.jpg" alt="Billing Policy" class="img-fluid mt-2 mb-4 border" />
 
                     </div>
-                </div>
-            </div>
-
-            <!-- Step 4: Establish Admin Proxy -->
+                                <!-- Step 4: Establish Admin Proxy -->
             <div class="mt-5">
                 <h2 class="text-center">STEP 4 — ESTABLISH YOUR ADMIN PROXY</h2>
                 <div class="row justify-content-center">
@@ -190,38 +201,48 @@
                             root account immediately — from this point forward, the root account is off-limits.
                         </p>
 
+                        <!-- Step 4.1 -->
                         <h5 class="mt-4"><strong>4.1 — Navigate to IAM Users</strong></h5>
                         <p>Navigate to your search bar and search for IAM.</p>
                         <img src="iam-user/iam-step-2.jpg" alt="Navigate to IAM Users" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- Step 4.2 -->
                         <h5 class="mt-4"><strong>4.2 — Create New IAM User</strong></h5>
-                        <p>Click IAM User and begin creating your personalised admin user.</p>
+                        <p>Click IAM User.</p>
                         <img src="iam-user/iam-step-3.jpg" alt="Create New IAM User" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- Step 4.3 -->
                         <h5 class="mt-4"><strong>4.3 — Set Console Access</strong></h5>
-                        <p>Enter your personalised username, enable AWS Management Console access and set an initial password.</p>
+                        <p> Enter your personalised username for the admin proxy account, enable AWS Management Console access and set an initial password for the user.</p>
                         <img src="iam-user/iam-step-4.jpg" alt="Set Console Access" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- Step 4.4 -->
                         <h5 class="mt-4"><strong>4.4 — Assign to Finance-Auditors Group</strong></h5>
                         <p>Add the new user to the Finance-Auditors group to inherit its billing permissions.</p>
                         <img src="iam-user/iam-step-5.jpg" alt="Assign to Finance-Auditors Group" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- Step 4.5 -->
                         <h5 class="mt-4"><strong>4.5 — Grant Administrator Permissions</strong></h5>
                         <p>Attach the AdministratorAccess policy directly to grant full console permissions.</p>
                         <img src="iam-user/iam-step-6.jpg" alt="Grant Administrator Permissions" class="img-fluid mt-2 mb-4 border" />
 
-                        <h5 class="mt-4"><strong>4.6 — Admin User Successfully Created</strong></h5>
-                        <p>The admin proxy user has been created successfully. AWS will now present you with two options to retrieve the login credentials:</p>
-                        <ul>
-                            <li class="mb-2"><strong>Email sign-in instructions</strong> — AWS sends the console login URL and username directly to the user's email address. This is useful when onboarding a team member remotely.</li>
-                            <li class="mb-2"><strong>Download the CSV file</strong> — AWS generates a CSV file containing the console login URL, username, and temporary password. Save this file securely as it will not be available again once you leave this page.</li>
-                        </ul>
-                        <p>Once credentials are saved, log out of the root account immediately. From this point forward, all AWS activity must be performed through this admin IAM user — the root account is now off-limits.</p>
-                        <img src="iam-user/iam-step-7.jpg" alt="Admin User Created" class="img-fluid mt-2 mb-4 border" />
-
-                    </div>
-                </div>
-            </div>
+                        <!-- Step 4.6 -->
+                       
+<h5 class="mt-4"><strong>4.6 — Admin User Successfully Created</strong></h5>
+<p>
+    The admin proxy user has been created successfully. AWS will now present you 
+    with two options to retrieve the login credentials:
+</p>
+<ul>
+    <li class="mb-2"><strong>Email sign-in instructions</strong> — AWS sends the console login URL and username directly to the user's email address. This is useful when onboarding a team member remotely.</li>
+    <li class="mb-2"><strong>Download the CSV file</strong> — AWS generates a CSV file containing the console login URL, username, and temporary password. Save this file securely as it will not be available again once you leave this page.</li>
+</ul>
+<p>
+    Once credentials are saved, log out of the root account immediately. 
+    From this point forward, all AWS activity must be performed through 
+    this admin IAM user — the root account is now off-limits.
+</p>
+<img src="iam-user/iam-step-7.jpg" alt="Admin User Created" class="img-fluid mt-2 mb-4 border" />
 
             <!-- Step 5: Implement Developer RBAC -->
             <div class="mt-5">
@@ -234,43 +255,47 @@
                             implementing Role-Based Access Control (RBAC) for the development team.
                         </p>
 
+                        <!-- 5.1 Logging in as Benjamin IAM User -->
                         <h5 class="mt-4"><strong>5.1 — Log In as Benjamin IAM User</strong></h5>
                         <p>Log out of the root account and sign in using the newly created Benjamin IAM admin user credentials.</p>
                         <img src="iam-user/iam-step-8.jpg" alt="Log In as Benjamin IAM User" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 5.2 -->
                         <h5 class="mt-4"><strong>5.2 — Benjamin IAM User Console Access Confirmed</strong></h5>
                         <p>Successfully logged in as the Benjamin IAM user. The root account is no longer in use.</p>
                         <img src="iam-user/iam-step-9.jpg" alt="Benjamin IAM User Console Access" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 5.3 Activate IAM User and Role Access to Billing -->
                         <h5 class="mt-4"><strong>5.3 — Activate IAM User and Role Access to Billing</strong></h5>
                         <p>Navigate to the Billing settings and activate IAM user and role access to allow the Finance-Auditors group to view billing information.</p>
                         <img src="iam-user/iam-step-10.jpg" alt="Activate IAM Billing Access" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 5.4 -->
                         <h5 class="mt-4"><strong>5.4 — Billing Access Successfully Activated</strong></h5>
                         <p>IAM user and role access to billing has been successfully activated, allowing the Finance-Auditors group to monitor financial activity.</p>
                         <img src="iam-user/iam-step-11.jpg" alt="Billing Access Activated" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 5.5 Implement Developer RBAC -->
                         <h5 class="mt-4"><strong>5.5 — Create Engineering-ReadOnly-Devs Group</strong></h5>
                         <p>Navigate to IAM User Groups and create a new group named <strong>Engineering-ReadOnly-Devs</strong> to manage developer access.</p>
                         <img src="iam-user/iam-step-12.jpg" alt="Create Engineering ReadOnly Devs Group" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 5.6 -->
                         <h5 class="mt-4"><strong>5.6 — Attach ReadOnlyAccess Policy</strong></h5>
                         <p>Attach the AWS managed <strong>ReadOnlyAccess</strong> policy to the Engineering-ReadOnly-Devs group, ensuring developers can view but not modify any resources.</p>
                         <img src="iam-user/iam-step-13.jpg" alt="Attach ReadOnly Policy" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 5.7 -->
                         <h5 class="mt-4"><strong>5.7 — Confirm Group and Policy Configuration</strong></h5>
                         <p>Review and confirm the group settings before finalising the Engineering-ReadOnly-Devs group creation.</p>
                         <img src="iam-user/iam-step-14.jpg" alt="Confirm Group Configuration" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 5.8 -->
                         <h5 class="mt-4"><strong>5.8 — Developer RBAC Successfully Implemented</strong></h5>
                         <p>The Engineering-ReadOnly-Devs group has been successfully created with the ReadOnlyAccess policy attached. Developer RBAC is now active.</p>
                         <img src="iam-user/iam-step-1.jpg" alt="Developer RBAC Implemented" class="img-fluid mt-2 mb-4 border" />
 
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 6: Provision the Identity - Alex-dev -->
+                                    <!-- Step 6: Provision the Identity - Alex-dev -->
             <div class="mt-5">
                 <h2 class="text-center">STEP 6 — PROVISION THE IDENTITY (ALEX-DEV)</h2>
                 <div class="row justify-content-center">
@@ -283,33 +308,58 @@
                             production environments.
                         </p>
 
+                        <!-- 6.1 -->
                         <h5 class="mt-4"><strong>6.1 — Navigate to IAM Users</strong></h5>
                         <p>Inside the IAM Console, navigate to Users and click Create User to begin provisioning the alex-dev identity.</p>
                         <img src="iam-Alex-dev/iam-step-1.jpg" alt="Navigate to IAM Users" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 6.2 -->
                         <h5 class="mt-4"><strong>6.2 — Create Alex-Dev User</strong></h5>
                         <p>Enter <strong>alex-dev</strong> as the username and enable AWS Management Console access.</p>
                         <img src="iam-Alex-dev/iam-step-2.jpg" alt="Create Alex Dev User" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 6.3 -->
                         <h5 class="mt-4"><strong>6.3 — Generate Initial Console Password</strong></h5>
                         <p>Set an initial console password for alex-dev and require a password reset on first login.</p>
                         <img src="iam-Alex-dev/iam-step-3.jpg" alt="Generate Initial Password" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 6.4 -->
                         <h5 class="mt-4"><strong>6.4 — Add to Engineering-ReadOnly-Devs Group</strong></h5>
                         <p>Assign alex-dev to the Engineering-ReadOnly-Devs group to inherit the ReadOnlyAccess policy.</p>
                         <img src="iam-Alex-dev/iam-step-4.jpg" alt="Add to Engineering ReadOnly Devs Group" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 6.5 -->
                         <h5 class="mt-4"><strong>6.5 — Review and Confirm User Settings</strong></h5>
                         <p>Review all the settings for alex-dev before finalising the user creation.</p>
                         <img src="iam-Alex-dev/iam-step-5.jpg" alt="Review User Settings" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 6.6 -->
                         <h5 class="mt-4"><strong>6.6 — Alex-Dev Successfully Created</strong></h5>
                         <p>The alex-dev user has been successfully created and added to the Engineering-ReadOnly-Devs group. Download the CSV file or send login credentials via email to complete the onboarding.</p>
                         <img src="iam-Alex-dev/iam-step-6.jpg" alt="Alex Dev Successfully Created" class="img-fluid mt-2 mb-4 border" />
 
+                        <!-- 6.7 -->
                         <h5 class="mt-4"><strong>6.7 — Verify Alex-Dev Access</strong></h5>
                         <p>Log in as alex-dev to confirm read-only access is working correctly and production environments are fully restricted.</p>
                         <img src="iam-Alex-dev/iam-step-7.jpg" alt="Verify Alex Dev Access" class="img-fluid mt-2 mb-4 border" />
+
+                    </div>
+                </div>
+            </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+                    </div
+
+                </div>
+            </div>
+
+                </div>
+            </div>
+
 
                     </div>
                 </div>
@@ -319,6 +369,7 @@
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
 </html>
