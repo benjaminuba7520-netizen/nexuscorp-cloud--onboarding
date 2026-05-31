@@ -185,6 +185,51 @@
                         <img src="iam-user-group/billing-policy.jpg" alt="Billing Policy" class="img-fluid mt-2 mb-4 border" />
 
                     </div>
+                                <!-- Step 4: Establish Admin Proxy -->
+            <div class="mt-5">
+                <h2 class="text-center">STEP 4 — ESTABLISH YOUR ADMIN PROXY</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <p class="mt-3">
+                            Create a personalised IAM User for yourself, assign it to the Finance-Auditors 
+                            group, and grant it administrator console permissions. Once done, log out of the 
+                            root account immediately — from this point forward, the root account is off-limits.
+                        </p>
+
+                        <!-- Step 4.1 -->
+                        <h5 class="mt-4"><strong>4.1 — Navigate to IAM Users</strong></h5>
+                        <p>Inside the IAM Console, click on Users to begin creating a new IAM user.</p>
+                        <img src="iam-user/iam-step-2.jpg" alt="Navigate to IAM Users" class="img-fluid mt-2 mb-4 border" />
+
+                        <!-- Step 4.2 -->
+                        <h5 class="mt-4"><strong>4.2 — Create New IAM User</strong></h5>
+                        <p>Click Create User and enter your personalised username for the admin proxy account.</p>
+                        <img src="iam-user/iam-step-3.jpg" alt="Create New IAM User" class="img-fluid mt-2 mb-4 border" />
+
+                        <!-- Step 4.3 -->
+                        <h5 class="mt-4"><strong>4.3 — Set Console Access</strong></h5>
+                        <p>Enable AWS Management Console access and set an initial password for the user.</p>
+                        <img src="iam-user/iam-step-4.jpg" alt="Set Console Access" class="img-fluid mt-2 mb-4 border" />
+
+                        <!-- Step 4.4 -->
+                        <h5 class="mt-4"><strong>4.4 — Assign to Finance-Auditors Group</strong></h5>
+                        <p>Add the new user to the Finance-Auditors group to inherit its billing permissions.</p>
+                        <img src="iam-user/iam-step-5.jpg" alt="Assign to Finance-Auditors Group" class="img-fluid mt-2 mb-4 border" />
+
+                        <!-- Step 4.5 -->
+                        <h5 class="mt-4"><strong>4.5 — Grant Administrator Permissions</strong></h5>
+                        <p>Attach the AdministratorAccess policy directly to grant full console permissions.</p>
+                        <img src="iam-user/iam-step-6.jpg" alt="Grant Administrator Permissions" class="img-fluid mt-2 mb-4 border" />
+
+                        <!-- Step 4.6 -->
+                        <h5 class="mt-4"><strong>4.6 — Admin User Successfully Created</strong></h5>
+                        <p>The admin proxy user has been created successfully. Log out of the root account immediately — the root account is now off-limits.</p>
+                        <img src="iam-user/iam-step-7.jpg" alt="Admin User Created" class="img-fluid mt-2 mb-4 border" />
+
+                    </div>
+                </div>
+            </div>
+
                 </div>
             </div>
 
